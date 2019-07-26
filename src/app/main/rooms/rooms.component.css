@@ -1,0 +1,27 @@
+.rooms-container {
+  width: 65%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 3rem;
+
+  font-weight: 300;
+  margin-bottom: 3rem
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.room-cell {
+  flex: 27%;
+  margin: 2rem;
+  margin-top: 0;
+  background-color: #fff;
+  flex-grow: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,39 @@
+:host-context main {
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.contact-item {
+  flex: 50%;
+  flex-grow: 0;
+}
+
+.contact-info {
+  padding: 0 5rem;
+  align-self: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 5rem;
+  height: 87%;
+  width: 100%;
+  position: absolute;
+}

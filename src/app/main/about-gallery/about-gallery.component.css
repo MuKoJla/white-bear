@@ -1,0 +1,38 @@
+:host {
+  position: relative;
+}
+
+.header-content{
+  position: absolute;
+  transform: translateY(40vh);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.header-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.hotel-img {
+  filter: brightness(0.7);
+  width: 100%;
+  height: 90vh;
+}
+
+.btn {
+  padding: 1rem;
+}
+
+.btn-left {
+  left: 2rem;
+}
+
+.btn-right {
+  right: 2rem;
+}

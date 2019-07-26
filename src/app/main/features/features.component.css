@@ -1,0 +1,36 @@
+.container {
+  width: 65%;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-item {
+  flex: 0 0 25%;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-item i {
+  font-size: 2.5rem;
+  color: #f23a2e;
+  /*font-weight: 700;*/
+}
+
+.features-item p {
+  font-size: 1rem;
+}
+
+

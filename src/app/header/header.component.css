@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  background-color: #9154ff;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 1rem;
+  color: white;
+}
+
+.menu {
+  display: inline-block;
+}
+
+.menu-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1rem;
+  padding-right: .5rem;
+}
+
+.menu-item:not(:last-of-type) {
+  border-right: 1px solid white;
+}

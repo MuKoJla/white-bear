@@ -1,0 +1,8 @@
+main {
+  margin-top: 5rem;
+}
+
+app-header {
+  z-index: 200;
+  display: block;
+}
