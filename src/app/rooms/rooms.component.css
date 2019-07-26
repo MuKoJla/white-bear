@@ -1,0 +1,27 @@
+.row {
+  text-align: center;
+  margin-top: -3rem;
+  margin-bottom: 3rem
+}
+
+.pagination-item {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 1rem;
+  background-color: white;
+  color: #f23a2e;
+  font-size: 1.1rem;
+  border: 1px solid rgba(84, 84, 84, 0.85);
+  border-radius: 50%;
+  cursor: pointer;
+
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.pagination-item-active {
+  background-color: #f23a2e;
+  color: white;
+  border-color: #f23a2e;
+}

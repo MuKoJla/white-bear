@@ -1,0 +1,12 @@
+<input type="text" #search (keyup.enter)="searchRooms(search.value)">
+
+<app-rooms-gallery [roomItems]="paginatedRooms"></app-rooms-gallery>
+
+<div class="row">
+  <ul>
+    <li class="pagination-item" *ngFor="let page of pages"
+        [class.pagination-item-active]="page === currentPage"
+        (click)="currentPage = page"
+    >{{ page }}</li>
+  </ul>
+</div>
