@@ -1,7 +1,77 @@
+.items {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+label[for="search"], label[for="price"] {
+  align-self: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+input[type="text"] {
+  width: 15rem;
+  font-size: 1rem;
+  padding: 12px 20px;
+  margin: 0 0.6rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input.price {
+  width: 7rem;
+}
+
+.price-dash{
+  align-self: center;
+}
+
+input[type="text"]:focus, .sort:focus {
+  outline-color: #f34136;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sort {
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: #f23a2e;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 0 2rem;
+  text-decoration: none;
+  /*margin: 4px 2px;*/
+  cursor: pointer;
+}
+
+button:hover {
+  outline-color: #f34136;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rooms-not-found {
+  margin-top: 10rem;
+  text-align: center;
+  color: #f35252;
+  font-size: 3rem;
+}
+
 .row {
   text-align: center;
-  margin-top: -3rem;
-  margin-bottom: 3rem
 }
 
 .pagination-item {
@@ -14,7 +84,6 @@
   border: 1px solid rgba(84, 84, 84, 0.85);
   border-radius: 50%;
   cursor: pointer;
-
   width: 3rem;
   height: 3rem;
   line-height: 3rem;

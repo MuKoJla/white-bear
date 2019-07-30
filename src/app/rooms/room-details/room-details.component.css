@@ -1,0 +1,55 @@
+
+
+img {
+  width: 700px;
+  height: 400px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  height: calc(100vh - 227px);
+  margin-top: 8rem;
+}
+
+
+.description-item {
+  flex: 50%;
+  flex-grow: 0;
+  margin: 1rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.description-room {
+  margin-top: 2rem;
+}
+
+.description-room p{
+  margin-bottom: 0.5rem;
+}
+
+.room-option {
+  font-weight: 700;
+}
+
+
+
+/*.description {*/
+/*display: flex;*/
+/*align-items: center;*/
+/*justify-content: center;*/
+/*!*flex-direction: column;*!*/
+/*}*/
+
+/*.description p,  .description img{*/
+/*margin-bottom: 1rem;*/
+/*}*/
+
+/*.description-item {*/
+/*font-weight: 600;*/
+/*}*/
+
+

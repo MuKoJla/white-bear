@@ -7,9 +7,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AboutGalleryComponent implements OnInit {
   images = [
-    'assets/images/header-1.jpg',
-    'assets/images/header-2.jpg',
-    'assets/images/header-3.jpg'
+    'assets/images/1.jpg',
+    'assets/images/2.jpg',
+    'assets/images/3.jpg'
   ];
 
   headers = ['Welcomeheader1', 'header1 header1 header1', 'header2 header2 header2'];

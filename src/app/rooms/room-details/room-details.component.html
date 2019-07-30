@@ -1,0 +1,16 @@
+<div class="row">
+  <img [src]="room.img" alt="hotel room" class="description-item">
+  <div class="description-item">
+    <h2 class="title">{{ room.type }}</h2>
+    <p>{{ room.description }}</p>
+    <div class="description-room">
+      <p><span class="room-option">Room Size: </span> {{ room.size }}</p>
+      <p><span class="room-option">Bed Type: </span> {{ room.bed }}</p>
+      <p><span class="room-option">Room View: </span> {{ room.bed }}</p>
+      <p><span class="room-option"> Price: </span>{{ room.price | currency }} / per night</p>
+      <p *ngIf="room.available">
+        <span class="room-option">Availability: </span> Room is available for booking!
+      </p>
+      </div>
+    </div>
+  </div>

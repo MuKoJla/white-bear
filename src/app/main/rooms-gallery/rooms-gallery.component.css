@@ -25,6 +25,16 @@
   background-color: #fff;
   flex-grow: 0;
   overflow: hidden;
+  border: 1px solid #eeeba7;
+  border-radius: 5px;
+}
+
+.room-cell:hover {
+  cursor: pointer;
+}
+
+.room-cell:focus {
+  outline: none;
 }
 
 @media (max-width: 600px) {

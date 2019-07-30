@@ -1,12 +1,46 @@
-<input type="text" #search (keyup.enter)="searchRooms(search.value)">
+<div class="items">
+  <div class="search-wrapper">
+    <label for="search">Room name:</label>
+    <input type="text" placeholder="Enter type of room" #search id="search">
+    <!--<button class="search" (click)="searchRooms(search.value)">Search</button>-->
+    <label for="price">Price:</label>
+    <input class="price"
+           id="price"
+           type="text"
+           placeholder="min"
+           #minimumPrice>
+    <span class="price-dash">-</span>
+    <input class="price"
+           type="text"
+           placeholder="max"
+           #maximumPrice>
 
-<app-rooms-gallery [roomItems]="paginatedRooms"></app-rooms-gallery>
+    <select name="sort" id="sort" #sort class="sort">
+      <option selected disabled>Sort</option>
+      <option value="default">Default</option>
+      <option value="lowToHigh">Price Low To High</option>
+      <option value="highToLow">Price High To Low</option>
+    </select>
+
+    <button (click)="filterRooms(search.value, minimumPrice.value, maximumPrice.value, sort.value)">Filter
+    </button>
+  </div>
+</div>
+
+<app-rooms-gallery *ngIf="paginatedRooms.length" [roomItems]="paginatedRooms"></app-rooms-gallery>
+
+<div class="rooms-not-found" *ngIf="paginatedRooms.length === 0">
+  <p>
+    Rooms not found!!!
+  </p>
+</div>
 
 <div class="row">
   <ul>
     <li class="pagination-item" *ngFor="let page of pages"
         [class.pagination-item-active]="page === currentPage"
         (click)="currentPage = page"
-    >{{ page }}</li>
+    >{{ page }}
+    </li>
   </ul>
 </div>

@@ -1,6 +1,6 @@
 <div class="rooms-container">
   <h1 class="header-title">Our Rooms</h1>
   <div class="row">
-    <app-room class="room-cell" *ngFor="let room of roomItems" [roomItem]="room"></app-room>
+    <app-room-gallery-view class="room-cell" [routerLink]="['/rooms', room.id]" *ngFor="let room of roomItems" [roomItem]="room"></app-room-gallery-view>
   </div>
 </div>

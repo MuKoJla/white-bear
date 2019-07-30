@@ -7,13 +7,14 @@ import { MainComponent } from './main/main.component';
 import { AboutGalleryComponent } from './main/about-gallery/about-gallery.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RoomsGalleryComponent } from './main/rooms-gallery/rooms-gallery.component';
-import { RoomComponent } from './main/rooms-gallery/room/room.component';
+import { RoomGalleryViewComponent } from './main/rooms-gallery/room-gallery-view/room-gallery-view.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FeaturesComponent } from './main/features/features.component';
 
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { RoomsComponent } from './rooms/rooms.component';
+import { RoomDetailsComponent } from './rooms/room-details/room-details.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { RoomsComponent } from './rooms/rooms.component';
     MainComponent,
     AboutGalleryComponent,
     RoomsGalleryComponent,
-    RoomComponent,
+    RoomGalleryViewComponent,
     ContactComponent,
     FooterComponent,
     FeaturesComponent,
-    RoomsComponent
+    RoomsComponent,
+    RoomDetailsComponent
   ],
   imports: [
     AppRoutingModule,
