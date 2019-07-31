@@ -14,9 +14,10 @@ export const RoomsData: RoomModel[] = [
     'combination of classic décor and contemporary amenities. ' +
     'These rooms offer City view or Inner Courtyard (Atrium) view - a good choice' +
     'for those who prefer a quieter room.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/standard-room-1.jpg',
-  }, {
+  },
+  {
     'id': 9,
     'type': 'Premium Room',
     'price': 330,
@@ -27,7 +28,7 @@ export const RoomsData: RoomModel[] = [
     'Decorated in elegant style, they feature marble entrance foyer, plush sofa and two armchairs in the sitting room, ' +
     'and an armchair in the bedroom, personal bar and flat-screen televisions.  The well-appointed marble bathrooms feature ' +
     'separate walk-in showers with rain showerhead, large chrome fittings.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/gold-room-3.jpg'
   },
   {
@@ -40,7 +41,7 @@ export const RoomsData: RoomModel[] = [
     'description': 'Enjoy additional space for rest and relaxation in One Bedroom Suite King rooms (61-68 sq. mt.)' +
     ' These suites consist of separate bedroom with King sized Stearns and Foster bed and well appointed sitting room. No two suites are ' +
     'the same. One Bedroom Suites offer City, Atrium or stunning River view.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/suite-room-2.jpg'
   },
   {
@@ -56,7 +57,11 @@ export const RoomsData: RoomModel[] = [
     'combination of classic décor and contemporary amenities. ' +
     'These rooms offer City view or Inner Courtyard (Atrium) view - a good choice' +
     'for those who prefer a quieter room.',
-    'available': false,
+    'bookingDates': [{
+      username: 'mukojla',
+      from: '2019-09-01',
+      to: '2019-09-05'
+    }],
     'img': 'assets/images/rooms/standard-room-2.jpg',
     // 'gallery': [
     //   'assets/images/header-2.jpg',
@@ -76,7 +81,7 @@ export const RoomsData: RoomModel[] = [
     'combination of classic décor and contemporary amenities. ' +
     'These rooms offer City view or Inner Courtyard (Atrium) view - a good choice' +
     'for those who prefer a quieter room.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/standard-room-3.jpg'
   },
   {
@@ -89,7 +94,7 @@ export const RoomsData: RoomModel[] = [
     'description': 'Enjoy additional space for rest and relaxation in One Bedroom Suite King rooms (61-68 sq. mt.)' +
     ' These suites consist of separate bedroom with King sized Stearns and Foster bed and well appointed sitting room. No two suites are ' +
     'the same. One Bedroom Suites offer City, Atrium or stunning River view.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/suite-room-1.jpg'
   },
 
@@ -103,7 +108,7 @@ export const RoomsData: RoomModel[] = [
     'description': 'Enjoy additional space for rest and relaxation in One Bedroom Suite King rooms (61-68 sq. mt.)' +
     ' These suites consist of separate bedroom with King sized Stearns and Foster bed and well appointed sitting room. No two suites are ' +
     'the same. One Bedroom Suites offer City, Atrium or stunning River view.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/suite-room-3.jpg'
   },
   {
@@ -117,7 +122,7 @@ export const RoomsData: RoomModel[] = [
     'Decorated in elegant style, they feature marble entrance foyer, plush sofa and two armchairs in the sitting room, ' +
     'and an armchair in the bedroom, personal bar and flat-screen televisions.  The well-appointed marble bathrooms feature ' +
     'separate walk-in showers with rain showerhead, large chrome fittings.',
-    'available': true,
+    'bookingDates': [],
     'img': 'assets/images/rooms/gold-room-1.jpg'
   },
   {
@@ -131,8 +136,13 @@ export const RoomsData: RoomModel[] = [
     'Decorated in elegant style, they feature marble entrance foyer, plush sofa and two armchairs in the sitting room, ' +
     'and an armchair in the bedroom, personal bar and flat-screen televisions.  The well-appointed marble bathrooms feature ' +
     'separate walk-in showers with rain showerhead, large chrome fittings.',
-    'available': false,
+    'bookingDates': [
+      {
+      username: 'IlonMask',
+      from: '2019-08-08',
+      to: '2019-08-14'
+    }
+    ],
     'img': 'assets/images/rooms/gold-room-2.jpg'
   },
-
 ];

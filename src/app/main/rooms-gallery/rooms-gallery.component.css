@@ -2,7 +2,7 @@
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding-top: 6rem;
 }
 
 .header-title {
@@ -19,7 +19,7 @@
 }
 
 .room-cell {
-  flex: 27%;
+  /*flex: 27%;*/
   margin: 2rem;
   margin-top: 0;
   background-color: #fff;

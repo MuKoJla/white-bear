@@ -1,7 +1,12 @@
+:host ::ng-deep app-rooms-gallery .rooms-container {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 .items {
   display: flex;
   justify-content: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 .search-wrapper {
@@ -33,12 +38,12 @@ input.price {
   align-self: center;
 }
 
-input[type="text"]:focus, .sort:focus {
+input[type="text"]:focus, .sort:focus, .availability:focus {
   outline-color: #f34136;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.sort {
+.sort, .availability {
   font-size: 1rem;
   padding: 0.7rem;
   border: 1px solid #ccc;
@@ -54,8 +59,8 @@ button {
   color: white;
   padding: 0 2rem;
   text-decoration: none;
-  /*margin: 4px 2px;*/
   cursor: pointer;
+  outline: none;
 }
 
 button:hover {

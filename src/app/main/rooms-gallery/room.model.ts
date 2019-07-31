@@ -6,6 +6,10 @@ export interface RoomModel {
   view: string;
   bed: string;
   description: string;
-  available: boolean;
+  bookingDates: {
+    username: string;
+    from: string;
+    to: string;
+  }[];
   img: string;
 }

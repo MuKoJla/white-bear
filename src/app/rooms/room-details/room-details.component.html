@@ -8,9 +8,30 @@
       <p><span class="room-option">Bed Type: </span> {{ room.bed }}</p>
       <p><span class="room-option">Room View: </span> {{ room.bed }}</p>
       <p><span class="room-option"> Price: </span>{{ room.price | currency }} / per night</p>
-      <p *ngIf="room.available">
-        <span class="room-option">Availability: </span> Room is available for booking!
-      </p>
+
+      <!--<div *ngIf="room.available">-->
+      <!--<span class="room-option">Availability: </span> Room is available for booking!-->
+      <!--</div>-->
+
+      <div *ngFor="let booking of room.bookingDates">
+        Room is booked from {{booking.from}} to {{booking.to}}
       </div>
+
+      <button
+        type="button"
+        *ngIf="!isBookingInProgress"
+        (click)="isBookingInProgress = true">Proceed to booking
+      </button>
+
+
+      <div *ngIf="isBookingInProgress">
+        <span *ngIf="errorMessage">{{errorMessage}}</span>
+        Username:<input #username type="text">
+        From<input #from type="date">
+        To <input #to type="date">
+        <button type="button" (click)="booking(username.value, from.value, to.value)">Book</button>
+      </div>
+
     </div>
   </div>
+</div>

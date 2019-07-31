@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RoomModel} from './rooms-gallery/room.model';
-import {RoomsData} from '../rooms-data';
+import {RoomsDataService} from '../rooms-data.service';
 
 @Component({
   selector: 'app-main',
@@ -8,9 +8,12 @@ import {RoomsData} from '../rooms-data';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  rooms: RoomModel[] = RoomsData.slice(0, 6);
+  rooms: RoomModel[];
 
-  constructor() {
+  constructor(
+    private roomDataService: RoomsDataService
+  ) {
+    this.rooms = this.roomDataService.getRooms().slice(0, 6);
   }
 
   ngOnInit() {

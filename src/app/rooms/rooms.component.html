@@ -22,7 +22,15 @@
       <option value="highToLow">Price High To Low</option>
     </select>
 
-    <button (click)="filterRooms(search.value, minimumPrice.value, maximumPrice.value, sort.value)">Filter
+    <select name="availability" id="availability" #availability class="availability">
+      <option value="all">All rooms</option>
+      <option value="free">Free rooms</option>
+      <option value="booked">Booked rooms</option>
+    </select>
+
+    <button
+      (click)="filterRooms(search.value, minimumPrice.value, maximumPrice.value, sort.value, availability.value)"
+    >Filter
     </button>
   </div>
 </div>
