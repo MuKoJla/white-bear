@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RoomModel} from '../main/rooms-gallery/room.model';
 import {RoomsDataService} from '../rooms-data.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -12,8 +13,10 @@ export class RoomsComponent implements OnInit {
   rooms: RoomModel[] = [];
   roomsPerPage = 3;
   currentPage = 1;
+  roomType: string;
 
   constructor(
+    private route: ActivatedRoute,
     private roomDataService: RoomsDataService
   ) {
     this.rooms = this.roomDataService.getRooms();
@@ -21,10 +24,23 @@ export class RoomsComponent implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit ', this.rooms);
+    this.route.queryParams.subscribe((queryParams) => {
+      this.roomType = queryParams.type;
+
+      console.log(this.roomType);
+
+      this.filterRooms(this.roomType, '', '', '', '');
+    });
   }
 
-  filterRooms(search: string, min: string, max: string, sort: string, availability: string) {
-    let filteredRooms = this.filterNames(this.roomDataService.getRooms(), search);
+  filterRooms(searchInput: string, min: string, max: string, sort: string, availability: string) {
+    let searchValue = searchInput;
+    if (this.roomType && !searchInput) {
+      searchValue = this.roomType;
+    } else {
+      this.roomType = '';
+    }
+    let filteredRooms = this.filterNames(this.roomDataService.getRooms(), searchValue);
     filteredRooms = this.filterPrice(filteredRooms, min, max);
     filteredRooms = this.sortRooms(filteredRooms, sort);
     filteredRooms = this.filterAvailability(filteredRooms, availability);

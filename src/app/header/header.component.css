@@ -37,7 +37,7 @@
 .menu-item:not(:last-child) {
   border-right: 1px solid black;
   margin-right: 1rem;
-  padding-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 
 .menu-item a {
@@ -45,12 +45,17 @@
   color: #939393;
 }
 
-.active a {
+.active > a {
   color: #f23a2e;
 }
 
-.menu-item:hover {
-  transform: scale(1.05);
+.menu-item:hover > a,
+.sub-menu-item:hover > a {
+  color: #9a4742;;
+}
+
+.menu-item:hover > .sub-menu {
+  display: block;
 }
 
 .mobile-btn {
@@ -83,7 +88,39 @@
   top: 20px;
 }
 
-@media (max-width: 600px) {
+.sub-menu {
+  position: absolute;
+  display: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 1px solid #939393;
+  background: white;
+  top: 55px;
+}
+
+.sub-menu ul {
+  list-style-type: none;
+}
+
+.arrow-top:before {
+  bottom: 100%;
+  left: 15%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #9a4742;
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.sub-menu-item {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 735px) {
   .mobile-btn {
     display: block;
   }
@@ -109,6 +146,7 @@
     font-size: 20px;
     color: black;
     padding: 5px;
+    position: relative;
   }
 
   .menu-item a {

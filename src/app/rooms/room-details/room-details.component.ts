@@ -57,6 +57,7 @@ export class RoomDetailsComponent implements OnInit {
 
     this.errorMessage = '';
     this.isBookingInProgress = false;
-    return this.roomDataService.updateRoomBookingById(this.room.id, username, from, to);
+    this.roomDataService.updateRoomBookingById(this.room.id, username, from, to);
+    this.room = this.roomDataService.getRoomById(this.room.id);
   }
 }

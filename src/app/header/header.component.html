@@ -10,6 +10,19 @@
     </li>
     <li class="menu-item" routerLinkActive="active">
       <a routerLink="/rooms">Rooms</a>
+      <div class="sub-menu">
+        <ul class="arrow-top">
+          <li class="sub-menu-item" routerLinkActive="active">
+            <a routerLink="/rooms" [queryParams]="{type:'standard'}">Standard Room</a>
+          </li>
+          <li class="sub-menu-item" routerLinkActive="active">
+            <a routerLink="/rooms" [queryParams]="{type:'suite'}">Suite Room</a>
+          </li>
+          <li class="sub-menu-item" routerLinkActive="active">
+            <a routerLink="/rooms" [queryParams]="{type:'premium'}">Premium Room</a>
+          </li>
+        </ul>
+      </div>
     </li>
     <li class="menu-item" routerLinkActive="active">
       <a routerLink="/events">Events</a>

@@ -37,8 +37,12 @@
   outline: none;
 }
 
-@media (max-width: 600px) {
-  .room-cell{
+@media (max-width: 735px) {
+  .room-cell {
     flex: 100%;
+  }
+
+  .row {
+    justify-content: center
   }
 }

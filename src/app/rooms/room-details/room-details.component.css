@@ -1,9 +1,8 @@
 
-
 img {
-  width: 700px;
-  height: 400px;
+  width: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .row {
@@ -12,11 +11,15 @@ img {
   padding-top: 8rem;
 }
 
-
 .description-item {
-  flex: 50%;
+  flex: 46%;
   flex-grow: 0;
+  flex-shrink: 0;
   margin: 1rem;
+}
+
+.description-item p {
+  font-size: 1.1rem;
 }
 
 .title {
@@ -27,7 +30,7 @@ img {
   margin-top: 2rem;
 }
 
-.description-room p{
+.description-room p {
   margin-bottom: 0.5rem;
 }
 
@@ -35,12 +38,36 @@ img {
   font-weight: 700;
 }
 
+.booking ul {
+  list-style-type: none;
+}
+
+.error {
+  color: red;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.user-input {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-input input {
+  width: 13rem;
+}
+
 button {
   background-color: #f23a2e;
-  display: block;
+  display: inline-block;
+  font-size: 1.1rem;
   border: none;
   border-radius: 4px;
   margin-top: 1rem;
+  margin-right: 0.5rem;
   color: white;
   padding: 1rem 2rem;
   line-height: 1;
@@ -49,19 +76,33 @@ button {
   outline: none;
 }
 
-/*.description {*/
+/*.booking-register {*/
 /*display: flex;*/
-/*align-items: center;*/
-/*justify-content: center;*/
-/*!*flex-direction: column;*!*/
+
 /*}*/
 
-/*.description p,  .description img{*/
-/*margin-bottom: 1rem;*/
-/*}*/
+label[for="username"], label[for="from"], label[for="to"] {
+  font-weight: 700;
+}
 
-/*.description-item {*/
-/*font-weight: 600;*/
-/*}*/
+.search-wrapper {
+  display: flex;
+  align-items: stretch;
+}
 
+@media (max-width: 1000px){
+    .row {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 2rem;
+      text-align: center;
+    }
 
+  .description-item{
+    flex: 100%;
+  }
+
+  .booking ul{
+    display: inline-block;
+  }
+}

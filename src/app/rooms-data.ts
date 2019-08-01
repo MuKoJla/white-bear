@@ -138,10 +138,20 @@ export const RoomsData: RoomModel[] = [
     'separate walk-in showers with rain showerhead, large chrome fittings.',
     'bookingDates': [
       {
-      username: 'IlonMask',
-      from: '2019-08-08',
-      to: '2019-08-14'
-    }
+        username: 'IlonMask',
+        from: '2019-08-08',
+        to: '2019-08-14'
+      },
+      {
+        username: 'IlonMaskFriend',
+        from: '2019-08-01',
+        to: '2019-08-07'
+      },
+      {
+        username: 'IlonMaskFather',
+        from: '2019-08-16',
+        to: '2019-08-29'
+      }
     ],
     'img': 'assets/images/rooms/gold-room-2.jpg'
   },

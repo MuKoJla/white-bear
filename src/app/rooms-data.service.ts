@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {RoomModel} from './main/rooms-gallery/room.model';
+import {BookingDateModel, RoomModel} from './main/rooms-gallery/room.model';
 import {RoomsData} from './rooms-data';
 
 @Injectable({providedIn: 'root'})
@@ -10,10 +10,22 @@ export class RoomsDataService {
     return [...this.rooms];
   }
 
-  getRoomById(id: number): RoomModel {
-    return this.getRooms().find(room => {
-      return room.id.toString() === id.toString();
+  private sortBookingDates(roomBookingDates: BookingDateModel[]): BookingDateModel[] {
+    return roomBookingDates.sort(function (currentBooking, nextBooking) {
+      if (currentBooking.from > nextBooking.from) {
+        return 1;
+      }
+      return -1;
     });
+  }
+
+  getRoomById(id: number): RoomModel {
+    const room = this.getRooms().find(roomItem => {
+      return roomItem.id.toString() === id.toString();
+    });
+
+    room.bookingDates = this.sortBookingDates(room.bookingDates);
+    return room;
   }
 
   updateRoomBookingById(roomId: number, username: string, from: string, to: string) {
@@ -27,7 +39,5 @@ export class RoomsDataService {
         return room;
       }
     });
-
-    // sort by booking dates
   }
 }
