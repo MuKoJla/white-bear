@@ -16,6 +16,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 .room-cell {
@@ -37,12 +38,3 @@
   outline: none;
 }
 
-@media (max-width: 735px) {
-  .room-cell {
-    flex: 100%;
-  }
-
-  .row {
-    justify-content: center
-  }
-}

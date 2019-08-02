@@ -1,19 +1,24 @@
 <div class="items">
   <div class="search-wrapper">
-    <label for="search">Room name:</label>
-    <input type="text" placeholder="Enter type of room" #search id="search">
-    <!--<button class="search" (click)="searchRooms(search.value)">Search</button>-->
-    <label for="price">Price:</label>
-    <input class="price"
-           id="price"
-           type="text"
-           placeholder="min"
-           #minimumPrice>
-    <span class="price-dash">-</span>
-    <input class="price"
-           type="text"
-           placeholder="max"
-           #maximumPrice>
+    <span class="search-item">
+      <label for="search">Room name:</label>
+      <input type="text" placeholder="Enter type of room" #search id="search">
+    </span>
+
+    <span class="price-item">
+      <label for="price">Price:</label>
+      <input class="price"
+             id="price"
+             type="text"
+             placeholder="min"
+             #minimumPrice>
+      <span class="price-dash">-</span>
+      <input class="price"
+             type="text"
+             placeholder="max"
+             #maximumPrice>
+    </span>
+
 
     <select name="sort" id="sort" #sort class="sort">
       <option selected disabled>Sort</option>
@@ -29,7 +34,8 @@
     </select>
 
     <button
-      (click)="filterRooms(search.value, minimumPrice.value, maximumPrice.value, sort.value, availability.value)"
+      (click)="
+      filterRooms(search.value, minimumPrice.value, maximumPrice.value, sort.value, availability.value)"
     >Filter
     </button>
   </div>

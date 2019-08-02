@@ -34,7 +34,7 @@ input.price {
   width: 7rem;
 }
 
-.price-dash{
+.price-dash {
   align-self: center;
 }
 
@@ -98,4 +98,23 @@ button:hover {
   background-color: #f23a2e;
   color: white;
   border-color: #f23a2e;
+}
+
+@media (max-width: 1150px) {
+  .row {
+    justify-content: center;
+    margin-bottom: 1.4rem;
+  }
+
+
+  .search-wrapper {
+    flex-wrap: wrap;
+    justify-content: center
+  }
+
+  .search-item, .price-item {
+    flex: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }

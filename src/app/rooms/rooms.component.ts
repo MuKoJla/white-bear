@@ -23,7 +23,7 @@ export class RoomsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('ngOnInit ', this.rooms);
+    // console.log('ngOnInit ', this.rooms);
     this.route.queryParams.subscribe((queryParams) => {
       this.roomType = queryParams.type;
 
@@ -59,16 +59,18 @@ export class RoomsComponent implements OnInit {
   get paginatedRooms() {
     const start = (this.currentPage - 1) * this.roomsPerPage;
     const end = start + this.roomsPerPage;
-    console.log(this.rooms);
+    // console.log(this.rooms);
     return this.rooms.slice(start, end);
   }
 
   filterNames(rooms: RoomModel[], search: string): RoomModel[] {
-    if (search === '') {
+    if (search === '' || !search) {
       return rooms;
     }
+    console.log(search);
     return rooms.filter(room => {
-      return room.type.toLowerCase().includes(search.toLowerCase());
+      return room.type.toLowerCase()
+        .includes(search.toLowerCase());
     });
   }
 

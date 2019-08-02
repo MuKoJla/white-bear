@@ -2,40 +2,38 @@
 
   <a routerLink="/" class="logo">White Bear</a>
 
-  <!--<p class="logo">White Bear</p>-->
-
   <ul class="menu" [class.side-menu--active]="showSideMenu">
     <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="/">Home</a>
+      <a routerLink="/" (click)="showSideMenu = !showSideMenu">Home</a>
     </li>
     <li class="menu-item" routerLinkActive="active">
-      <a routerLink="/rooms">Rooms</a>
+      <a routerLink="/rooms" (click)="showSideMenu = !showSideMenu">Rooms</a>
       <div class="sub-menu">
         <ul class="arrow-top">
           <li class="sub-menu-item" routerLinkActive="active">
-            <a routerLink="/rooms" [queryParams]="{type:'standard'}">Standard Room</a>
+            <a routerLink="/rooms" [queryParams]="{type:'standard'}" (click)="showSideMenu = !showSideMenu">Standard Room</a>
           </li>
           <li class="sub-menu-item" routerLinkActive="active">
-            <a routerLink="/rooms" [queryParams]="{type:'suite'}">Suite Room</a>
+            <a routerLink="/rooms" [queryParams]="{type:'suite'}" (click)="showSideMenu = !showSideMenu">Suite Room</a>
           </li>
           <li class="sub-menu-item" routerLinkActive="active">
-            <a routerLink="/rooms" [queryParams]="{type:'premium'}">Premium Room</a>
+            <a routerLink="/rooms" [queryParams]="{type:'premium'}" (click)="showSideMenu = !showSideMenu">Premium Room</a>
           </li>
         </ul>
       </div>
     </li>
     <li class="menu-item" routerLinkActive="active">
-      <a routerLink="/events">Events</a>
+      <a routerLink="/events" (click)="showSideMenu = !showSideMenu">Events</a>
     </li>
     <li class="menu-item" routerLinkActive="active">
-      <a routerLink="/contact">Contact</a>
+      <a routerLink="/contact" (click)="showSideMenu = !showSideMenu">Contact</a>
     </li>
     <li class="menu-item" routerLinkActive="active">
-      <a routerLink="/about">About</a>
+      <a routerLink="/about" (click)="showSideMenu = !showSideMenu">About</a>
     </li>
   </ul>
 
-  <a href="#" class="mobile-btn"
+  <a class="mobile-btn"
      (click)="showSideMenu = !showSideMenu">
     <span></span>
     <span></span>

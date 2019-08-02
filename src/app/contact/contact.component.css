@@ -2,8 +2,6 @@
 .row {
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidden;
-  height: calc(100vh - 179px);
 }
 
 .contact-item {
@@ -33,7 +31,7 @@
   overflow: hidden;
   /*padding-bottom: 56.25%;*/
   position: relative;
-  height: 100%;
+  height: 75vh;
 }
 
 .map-responsive iframe {
@@ -83,4 +81,30 @@ button {
 input:focus, textarea:focus, button:hover {
   outline-color: #f34136;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1150px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    flex: 100%;
+    margin: 2rem 2rem;
+    padding: 0;
+  }
+
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+
+  .map-responsive {
+    height: 45vh;
+    order: 2
+  }
+
 }

@@ -12,7 +12,6 @@ export class AboutGalleryComponent implements OnInit {
     'assets/images/3.jpg'
   ];
 
-  headers = ['Welcomeheader1', 'header1 header1 header1', 'header2 header2 header2'];
   imageIndex = 0;
 
   constructor() {
@@ -23,7 +22,6 @@ export class AboutGalleryComponent implements OnInit {
 
   onSliderClick(direction: string): number {
     if (direction === 'left' && this.imageIndex === 0 || this.imageIndex === this.images.length - 1) {
-      console.log(this.imageIndex);
       return this.imageIndex = 0;
     }
 
