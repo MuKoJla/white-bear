@@ -23,13 +23,9 @@ export class RoomsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log('ngOnInit ', this.rooms);
     this.route.queryParams.subscribe((queryParams) => {
       this.roomType = queryParams.type;
-
-      console.log(this.roomType);
-
-      this.filterRooms(this.roomType, '', '', '', '');
+      this.filterRooms('', '', '', '', '');
     });
   }
 
@@ -45,6 +41,7 @@ export class RoomsComponent implements OnInit {
     filteredRooms = this.sortRooms(filteredRooms, sort);
     filteredRooms = this.filterAvailability(filteredRooms, availability);
     this.rooms = filteredRooms ? filteredRooms : [];
+    this.currentPage = 1;
   }
 
   get pages(): number[] {
@@ -59,7 +56,6 @@ export class RoomsComponent implements OnInit {
   get paginatedRooms() {
     const start = (this.currentPage - 1) * this.roomsPerPage;
     const end = start + this.roomsPerPage;
-    // console.log(this.rooms);
     return this.rooms.slice(start, end);
   }
 
@@ -131,9 +127,9 @@ export class RoomsComponent implements OnInit {
 
     return rooms.filter(room => {
       if (maxPrice > 0 && minPrice >= 0) {
-        return Number(min) <= room.price && room.price <= Number(max);
+        return minPrice <= room.price && room.price <= maxPrice;
       }
-      return Number(min) <= room.price;
+      return minPrice <= room.price;
     });
   }
 
