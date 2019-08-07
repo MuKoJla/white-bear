@@ -10,10 +10,6 @@ export interface RoomModel {
   img: string;
 }
 
-interface OnInit {
-  ngOnInit: () => void;
-}
-
 export interface BookingDateModel {
   username: string;
   from: string;

@@ -63,7 +63,6 @@ export class RoomsComponent implements OnInit {
     if (search === '' || !search) {
       return rooms;
     }
-    console.log(search);
     return rooms.filter(room => {
       return room.type.toLowerCase()
         .includes(search.toLowerCase());

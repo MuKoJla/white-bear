@@ -76,11 +76,6 @@ button {
   outline: none;
 }
 
-/*.booking-register {*/
-/*display: flex;*/
-
-/*}*/
-
 label[for="username"], label[for="from"], label[for="to"] {
   font-weight: 700;
 }

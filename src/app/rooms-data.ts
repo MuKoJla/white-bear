@@ -63,10 +63,6 @@ export const RoomsData: RoomModel[] = [
       to: '2019-09-05'
     }],
     'img': 'assets/images/rooms/standard-room-2.jpg',
-    // 'gallery': [
-    //   'assets/images/header-2.jpg',
-    //   'assets/images/header-2.jpg'
-    // ]
   },
   {
     'id': 3,
